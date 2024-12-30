@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "typeRoots": [
+      "./node_modules/@types",
+      "./types" 
+    ],
+    "types": ["node", "estree", "json-schema"]  
+  },
+  "include": [
+    "src/**/*",
+    "node_modules/@types/**/*.d.ts"  
+  ]
+}
