@@ -3,16 +3,16 @@ import { TypeAnimation } from "react-type-animation";
 
 const Typewriter = () => {
   return (
-    <div className="w-full">
+    <div className="w-full font-montserrat h-[120px] md:h-[160px]"> {/* Fixed height container */}
       <TypeAnimation
         sequence={[
           "my name is Omotunde-Young Qudus.",
           5000,
-          "I am a Digital Strategist.",
+          "a Digital Strategist.",
           5000,
-          "I am a Social Media Strategist.",
+          "a Social Media Strategist.",
           5000,
-          "I am a Performance Marketer.",
+          "a Performance Marketer.",
           5000,
         ]}
         wrapper="div"
@@ -22,10 +22,7 @@ const Typewriter = () => {
         cursor={true}
         style={{
           display: 'inline-block',
-          whiteSpace: 'pre-line',
-          minHeight: '2.5em',
           width: '100%',
-          marginTop: "7px",
         }}
       />
     </div>
