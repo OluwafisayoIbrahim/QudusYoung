@@ -12,6 +12,7 @@ const Sidebar = () => {
 
   const navItems = useMemo(
     () => [
+      { name: "Home", path: "#home"},
       { name: "About", path: "#about" },
       { name: "Portfolio", path: "#portfolio" },
       { name: "Skills", path: "#skills" },
