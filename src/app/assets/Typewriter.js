@@ -25,7 +25,7 @@ const Typewriter = () => {
           whiteSpace: 'pre-line',
           minHeight: '2.5em',
           width: '100%',
-          fontFamily: "font-montserrat",
+          fontFamily: '"--font-montserrat", sans-serif',
           marginTop: "7px",
         }}
       />
