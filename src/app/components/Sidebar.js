@@ -10,11 +10,12 @@ const Sidebar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("#home");
 
-  // Memoize navItems to avoid recreation
   const navItems = useMemo(
     () => [
-      { name: "Projects", path: "#projects" },
       { name: "About", path: "#about" },
+      { name: "Portfolio", path: "#portfolio" },
+      { name: "Skills", path: "#skills" },
+      { name: "Experience", path: "#experience" },
       { name: "Contact", path: "#contact" },
     ],
     []
