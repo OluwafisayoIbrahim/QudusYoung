@@ -60,7 +60,7 @@ const About = () => {
                   alt="Profile"
                   width={1000}
                   height={600}
-                  layout="intrinsic"
+                  layout="responsive"
                   objectFit="cover"
                   className="grayscale"
                   priority
@@ -80,7 +80,7 @@ const About = () => {
                   alt="Profile"
                   width={1000}
                   height={600}
-                  layout="intrinsic"
+                  layout="responsive"
                   objectFit="cover"
                   className="grayscale"
                   priority
