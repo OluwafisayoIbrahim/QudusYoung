@@ -8,11 +8,11 @@ const Typewriter = () => {
         sequence={[
           "my name is Omotunde-Young Qudus.",
           5000,
-          "I am a Digital Strategist.",
+          "I'm a Digital Strategist.",
           5000,
-          "I am a Social Media Strategist.",
+          "I'm a Social Media Strategist.",
           5000,
-          "I am a Performance Marketer.",
+          "I'm a Performance Marketer.",
           5000,
         ]}
         wrapper="div"

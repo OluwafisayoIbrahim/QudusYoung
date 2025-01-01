@@ -1,10 +1,10 @@
-"use client"
-import React, { useEffect, useState } from 'react';
-import Sidebar from './components/Sidebar';
-import SocialLinks from './components/SocialLinks';
-import Link from 'next/link';
-import Typewriter from './assets/Typewriter';
-import { motion } from 'framer-motion';
+"use client";
+import React, { useEffect, useState } from "react";
+import Sidebar from "./components/Sidebar";
+import SocialLinks from "./components/SocialLinks";
+import Link from "next/link";
+import Typewriter from "./assets/Typewriter";
+import { motion } from "framer-motion";
 
 const MagneticButton = ({ href, children }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -21,7 +21,7 @@ const MagneticButton = ({ href, children }) => {
 
     const center = {
       x: left + width / 2,
-      y: top + height / 2
+      y: top + height / 2,
     };
 
     // Calculate distance from center (max 30px movement)
@@ -31,7 +31,7 @@ const MagneticButton = ({ href, children }) => {
 
     setPosition({
       x: Math.max(Math.min(x, maxDistance), -maxDistance),
-      y: Math.max(Math.min(y, maxDistance), -maxDistance)
+      y: Math.max(Math.min(y, maxDistance), -maxDistance),
     });
   };
 
@@ -57,7 +57,7 @@ const MagneticButton = ({ href, children }) => {
           type: "spring",
           stiffness: 150,
           damping: 15,
-          mass: 0.1
+          mass: 0.1,
         }}
       >
         {children}
@@ -68,14 +68,11 @@ const MagneticButton = ({ href, children }) => {
 
 const Page = () => {
   return (
-    <main className="min-h-screen bg-black p-6 lg:p-12 flex" id="#home">
-      {/* Sidebar Component */}
-      <Sidebar />
-
+    <main className="min-h-screen bg-black p-6 lg:p-12 flex">
       <div className="flex flex-col justify-center max-w-4xl mx-auto ml-4 lg:ml-32 mt-20">
         <h1 className="text-4xl lg:text-6xl text-white mb-8 space-y-4">
           <span className="text-white bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
-            Hello! {" "}
+            Hello!{" "}
           </span>
           <br />
           <div className="w-full overflow-hidden">

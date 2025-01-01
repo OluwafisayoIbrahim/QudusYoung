@@ -1,6 +1,7 @@
 "use client";
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import SidebarLink from "./SidebarLink";
 import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
 import { AnimatePresence, motion } from "framer-motion";
@@ -8,56 +9,17 @@ import Logo from "./Logo";
 
 const Sidebar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState("#home");
+  const pathname = usePathname();
 
-  const navItems = useMemo(
-    () => [
-      { name: "Home", path: "#home"},
-      { name: "About", path: "#about" },
-      { name: "Portfolio", path: "#portfolio" },
-      { name: "Skills", path: "#skills" },
-      { name: "Experience", path: "#experience" },
-      { name: "Contact", path: "#contact" },
-    ],
-    []
-  );
+  const navItems = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Portfolio", path: "/portfolio" },
+    { name: "Skills", path: "/skills" },
+    { name: "Contact", path: "/contact" },
+  ];
 
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      navItems.forEach((link) => {
-        const section = document.querySelector(link.path); // Now using valid selectors like "#projects"
-        if (section) {
-          const sectionTop = section.offsetTop;
-          const sectionHeight = section.clientHeight;
-          if (
-            scrollPosition >= sectionTop &&
-            scrollPosition < sectionTop + sectionHeight
-          ) {
-            setActiveLink(link.path);
-          }
-        }
-      });
-    };
-
-    const handleHashChange = () => {
-      setActiveLink(window.location.hash || "#home");
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("hashchange", handleHashChange);
-    handleScroll(); // Initial check
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("hashchange", handleHashChange);
-    };
-  }, [navItems]);
-
-  const handleLinkClick = (href) => {
-    setActiveLink(href);
+  const handleLinkClick = () => {
     setNavbarOpen(false);
   };
 
@@ -79,8 +41,8 @@ const Sidebar = () => {
                   <SidebarLink
                     href={link.path}
                     title={link.name}
-                    isActive={activeLink === link.path}
-                    onClick={() => handleLinkClick(link.path)}
+                    isActive={pathname === link.path}
+                    onClick={handleLinkClick}
                   />
                 </li>
               ))}
@@ -129,8 +91,8 @@ const Sidebar = () => {
                     <SidebarLink
                       href={link.path}
                       title={link.name}
-                      isActive={activeLink === link.path}
-                      onClick={() => handleLinkClick(link.path)}
+                      isActive={pathname === link.path}
+                      onClick={handleLinkClick}
                     />
                   </li>
                 ))}
