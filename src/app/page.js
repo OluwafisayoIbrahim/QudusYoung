@@ -68,7 +68,13 @@ const MagneticButton = ({ href, children }) => {
 
 const Page = () => {
   return (
-    <main className="min-h-screen bg-black p-6 lg:p-12 flex">
+    <motion.main
+      className="min-h-screen bg-black p-6 lg:p-12 flex"
+      initial={{ opacity: 1, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      
+    >
       <div className="flex flex-col justify-center max-w-4xl mx-auto ml-4 lg:ml-32 mt-20">
         <h1 className="text-4xl lg:text-6xl text-white mb-8 space-y-4">
           <span className="text-white bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
@@ -86,7 +92,7 @@ const Page = () => {
           <SocialLinks />
         </div>
       </div>
-    </main>
+    </motion.main>
   );
 };
 

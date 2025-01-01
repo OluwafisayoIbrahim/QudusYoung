@@ -1,3 +1,5 @@
+import { fontFamily } from 'tailwindcss/defaultTheme';
+
 /** @type {import('tailwindcss').Config} */
 const config = {
   content: [
@@ -20,8 +22,8 @@ const config = {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        poppins: ["var(--font-poppins)", "sans-serif"],
-        montserrat: ["var(--font-montserrat)", "sans-serif"],
+        poppins: ['var(--font-poppins)', ...fontFamily.sans],
+        montserrat: ['var(--font-montserrat)', ...fontFamily.sans],
         black: "#000000",
         white: "#FFFFFF"
       },

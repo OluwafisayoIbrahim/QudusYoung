@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Define light mode and dark mode colors */
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -9,21 +10,24 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-      --background: #000000;
-      --foreground: #FFFFFF;
-    }
+    --background: #000000;
+    --foreground: #ffffff;
   }
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: var(--font-montserrat), sans-serif;
 }
 
+/* Set global font and color variables */
+body {
+  color: var(--foreground);
+  background-color: var(--background);
+  font-family: var(--font-montserrat), sans-serif; /* Default font */
+}
+
+/* Apply Poppins for headings */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-poppins), sans-serif;
 }
 
-*{
+/* Apply Montserrat globally for all elements */
+* {
   font-family: var(--font-montserrat), sans-serif;
 }
