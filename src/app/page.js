@@ -80,7 +80,7 @@ const Page = () => {
           </div>
         </h1>
         <div className="flex items-center mt-2 space-x-4">
-          <MagneticButton href="https://omotundeyoungqudus.tiiny.site/">
+          <MagneticButton href="https://qudusyoung.tiiny.site/">
             Resume
           </MagneticButton>
           <SocialLinks />

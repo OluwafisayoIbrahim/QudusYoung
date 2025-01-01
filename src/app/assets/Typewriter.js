@@ -7,13 +7,13 @@ const Typewriter = () => {
       <TypeAnimation
         sequence={[
           "my name is Omotunde-Young Qudus.",
-          5000,
+          200,
           "I'm a Digital Strategist.",
-          5000,
+          200,
           "I'm a Social Media Strategist.",
-          5000,
+          200,
           "I'm a Performance Marketer.",
-          5000,
+          200,
         ]}
         wrapper="div"
         speed={50}
