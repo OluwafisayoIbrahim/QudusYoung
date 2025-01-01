@@ -1,23 +1,21 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const About = () => {
-  const [showImage, setShowImage] = useState(true);
-  const [isMounted, setIsMounted] = useState(false);
+  const [isImageOne, setIsImageOne] = useState(true); // Toggle between images
+
+  // Memoize the toggleImage function with useCallback
+  const toggleImage = useCallback(() => {
+    setIsImageOne((prev) => !prev);
+  }, []); // Empty dependency array to memoize the function
 
   useEffect(() => {
-    setIsMounted(true);
     const interval = setInterval(() => {
-      setShowImage((prev) => !prev);
-    }, 3000);
-
-    return () => clearInterval(interval); // Cleanup the interval
-  }, []);
-
-  if (!isMounted) return null; // Render only on client-side
-
+      toggleImage();
+    }, 4000); // Change the image every 3 seconds
+    return () => clearInterval(interval); // Clean up the interval on component unmount
+  }, [toggleImage]); // Add toggleImage as a dependency
 
   return (
     <main className="min-h-screen pt-20 px-4 bg-black">
@@ -45,49 +43,26 @@ const About = () => {
 
         {/* Right Column */}
         <div className="relative xl:w-full xl:h-full lg:h-full 2xl:h-full sm:w-full sm:h-[300px] rounded-lg overflow-hidden">
-          <AnimatePresence>
-            {showImage ? (
-              <motion.div
-                key="image1"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 1 }}
-                className="absolute w-full h-full"
-              >
-                <Image
-                  src="/images/qudus1.jpg"
-                  alt="Profile"
-                  width={1000}
-                  height={600}
-                  layout="responsive"
-                  objectFit="cover"
-                  className="grayscale"
-                  priority
-                />
-              </motion.div>
-            ) : (
-              <motion.div
-                key="image2"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 1 }}
-                className="absolute w-full h-full"
-              >
-                <Image
-                  src="/images/qudus2.jpg"
-                  alt="Profile"
-                  width={1000}
-                  height={600}
-                  layout="responsive"
-                  objectFit="cover"
-                  className="grayscale"
-                  priority
-                />
-              </motion.div>
-            )}
-          </AnimatePresence>
+          <div className="transition-all duration-200 ease-in-out">
+            <Image
+              src="/images/Qudus1.jpg"
+              alt="Image 1"
+              width={1000}
+              height={600}
+              layout="intrinsic"
+              objectFit="cover"
+              className={`absolute grayscale top-0 left-0 transition-opacity duration-500 ${isImageOne ? 'opacity-100' : 'opacity-0'}`}
+            />
+            <Image
+              src="/images/Qudus2.jpg" // Ensure the correct file extension
+              alt="Image 2"
+              width={1000}
+              height={600}
+              layout="intrinsic"
+              objectFit="cover"
+              className={`absolute grayscale top-0 left-0 transition-opacity duration-500 ${!isImageOne ? 'opacity-100' : 'opacity-0'}`}
+            />
+          </div>
         </div>
       </div>
     </main>
