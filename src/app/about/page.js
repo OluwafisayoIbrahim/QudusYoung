@@ -5,15 +5,19 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const About = () => {
   const [showImage, setShowImage] = useState(true);
+  const [isMounted, setIsMounted] = useState(false);
 
-  // Automatically switch images every 3 seconds
   useEffect(() => {
+    setIsMounted(true);
     const interval = setInterval(() => {
-      setShowImage((prev) => !prev); // Toggle between true and false
-    }, 5000); // Change image every 3 seconds
+      setShowImage((prev) => !prev);
+    }, 3000);
 
-    return () => clearInterval(interval); // Cleanup the interval on unmount
+    return () => clearInterval(interval); // Cleanup the interval
   }, []);
+
+  if (!isMounted) return null; // Render only on client-side
+
 
   return (
     <main className="min-h-screen pt-20 px-4 bg-black">
@@ -41,7 +45,6 @@ const About = () => {
 
         {/* Right Column */}
         <div className="relative xl:w-full xl:h-full lg:h-full 2xl:h-full sm:w-full sm:h-[300px] rounded-lg overflow-hidden">
-          {/* Use AnimatePresence to smoothly transition between images */}
           <AnimatePresence>
             {showImage ? (
               <motion.div
