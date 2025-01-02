@@ -5,7 +5,7 @@ import SocialLinks from "./components/SocialLinks";
 import Link from "next/link";
 import Typewriter from "./assets/Typewriter";
 import { motion } from "framer-motion";
-import { RightArrowIcon } from "./assets/SocialMediaIcons";
+import { AccessBankIcon, BandGIcon, KerryGoldIcon, MorningFreshIcon, RightArrowIcon, ShinguarsIcon, WPXIcon, PNXIcon, PremierCoolIcon, OlogeIcon, KleenUpIcon } from "./assets/SocialMediaIcons";
 import Brands from "./components/Brands";
 
 const MagneticButton = ({ href, children }) => {
@@ -71,7 +71,7 @@ const MagneticButton = ({ href, children }) => {
 const Page = () => {
   return (
     <>
-      <motion.main
+      <main
         className="min-h-screen bg-black p-6 lg:p-12 flex"
         initial={{ opacity: 1, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -109,13 +109,27 @@ const Page = () => {
             </div>
           </div>
         </div>
-      </motion.main>
+      </main>
       <section className="p-4 lg:p-6 bg-black flex flex-col items-center">
-        <hr className="my-8 border-gray-600 mx-auto w-full xl:w-full" />
-        <div className="w-full">
-          <Brands />
-        </div>
-      </section>
+  <hr className="my-8 border-gray-600 w-full" />
+  <h1 className="text-white text-2xl font-montserrat text-center">
+    SOME BRANDS I&apos;VE WORKED WITH.
+  </h1>
+  <div className="grid lg:grid-cols-10 sm:grid-cols-10 gap-8 mt-8">
+    {/* Brand logos or content go here */}
+    <MorningFreshIcon />
+    <WPXIcon  />
+    <ShinguarsIcon />
+    <AccessBankIcon />
+    <KerryGoldIcon />
+    <BandGIcon />
+    <PNXIcon />
+    <PremierCoolIcon />
+    <OlogeIcon />
+    <KleenUpIcon />
+  </div>
+</section>
+
     </>
   );
 };

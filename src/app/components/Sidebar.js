@@ -26,7 +26,7 @@ const Sidebar = () => {
   return (
     <>
       {/* Navbar for larger screens */}
-      <nav className="fixed top-0 left-0 right-0 z-10 bg-black bg-opacity-90 md:block hidden">
+      <nav className="fixed top-0 left-0 right-0 z-10 bg-black bg-opacity-90 lg:block hidden">
         <div className="flex flex-wrap lg:py-4 items-center justify-between mx-auto px-4 py-2">
           <Link
             href="/"
