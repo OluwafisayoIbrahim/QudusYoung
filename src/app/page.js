@@ -115,7 +115,7 @@ const Page = () => {
   <h1 className="text-white text-2xl font-montserrat text-center">
     SOME BRANDS I&apos;VE WORKED WITH.
   </h1>
-  <div className="grid lg:grid-cols-10 sm:grid-cols-10 gap-8 mt-8">
+  <div className="grid lg:grid-cols-10 sm:grid-cols-4 gap-8 mt-8">
     {/* Brand logos or content go here */}
     <MorningFreshIcon />
     <WPXIcon  />
