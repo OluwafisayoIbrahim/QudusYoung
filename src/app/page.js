@@ -5,6 +5,8 @@ import SocialLinks from "./components/SocialLinks";
 import Link from "next/link";
 import Typewriter from "./assets/Typewriter";
 import { motion } from "framer-motion";
+import { RightArrowIcon } from "./assets/SocialMediaIcons";
+import Brands from "./components/Brands";
 
 const MagneticButton = ({ href, children }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -68,31 +70,53 @@ const MagneticButton = ({ href, children }) => {
 
 const Page = () => {
   return (
-    <motion.main
-      className="min-h-screen bg-black p-6 lg:p-12 flex"
-      initial={{ opacity: 1, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      
-    >
-      <div className="flex flex-col justify-center max-w-4xl mx-auto ml-4 lg:ml-32 mt-20">
-        <h1 className="text-4xl lg:text-6xl text-white mb-8 space-y-4">
-          <span className="text-white bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
-            Hello!{" "}
-          </span>
-          <br />
-          <div className="w-full overflow-hidden">
-            <Typewriter />
+    <>
+      <motion.main
+        className="min-h-screen bg-black p-6 lg:p-12 flex"
+        initial={{ opacity: 1, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <div className="flex flex-col justify-center max-w-4xl mx-auto ml-4 lg:ml-32 mt-20">
+          <h1 className="text-4xl lg:text-6xl text-white mb-8 space-y-4">
+            <span className="text-white bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
+              Hello!{" "}
+            </span>
+            <br />
+            <div className="w-full overflow-hidden">
+              <Typewriter />
+            </div>
+          </h1>
+          <div className="flex items-center mt-2 space-x-4">
+            <MagneticButton href="https://qudusyoung.tiiny.site/">
+              Resume
+            </MagneticButton>
+            <SocialLinks />
+            <div className="w-full sm:w-full lg:w-auto mt-4 sm:mt-4 lg:mt-0">
+              <Link
+                href="/contact"
+                passHref
+                className="text-white xl:flex xl:items-center xl:relative xl:space-x-2 xl:mt-20 xl:text-xl xl:ml-44 sm:text-sm sm:flex sm:absolute sm:left-0 sm:mt-10 sm:ml-12"
+              >
+                <span>Get in touch</span>
+                <motion.div
+                  whileHover={{ x: 8 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                >
+                  <RightArrowIcon className="text-white" />
+                </motion.div>
+              </Link>
+            </div>
           </div>
-        </h1>
-        <div className="flex items-center mt-2 space-x-4">
-          <MagneticButton href="https://qudusyoung.tiiny.site/">
-            Resume
-          </MagneticButton>
-          <SocialLinks />
         </div>
-      </div>
-    </motion.main>
+      </motion.main>
+      <section className="p-4 lg:p-6 bg-black flex flex-col items-center">
+        <hr className="my-8 border-gray-600 mx-auto w-full xl:w-full" />
+        <div className="w-full">
+          <Brands />
+        </div>
+      </section>
+    </>
   );
 };
 

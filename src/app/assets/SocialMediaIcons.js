@@ -84,3 +84,15 @@ export const LinkedInIcon = ({ className, ...rest }) => (
     ></path>
   </svg>
 );
+
+export const RightArrowIcon = ({ className, ...rest }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" className={`w-6 h-6 ${className}`} {...rest}>
+    <path
+      fill="#ffffff"
+      d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499z"
+      data-name="Right"
+    ></path>
+  </svg>
+);
+
+
