@@ -98,7 +98,7 @@ export const RightArrowIcon = ({ className, ...rest }) => (
 
 
 export const MorningFreshIcon = ({className, ...rest}) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510 399" className={`w-20 h-20 ${className}`} {...rest}>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510 399" className={`lg:w-20 lg:h-20 sm:w-10 sm:h-10 ${className}`} {...rest}>
     <path fill="#FCFCFB" d="M0 0h510v399H0z"></path>
     <path
       fill="#D90404"
@@ -1875,7 +1875,7 @@ export const MorningFreshIcon = ({className, ...rest}) => (
 );
 
 export const WPXIcon = ({className, ...rest}) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 169 160" className={`w-20 h-20 ${className}`} {...rest}>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 169 160" className={`lg:w-20 lg:h-20 sm:w-10 sm:h-10 ${className}`} {...rest}>
     <path
       fill="#4DB3E4"
       d="M89 3c3.649 2.676 6.775 5.836 10 9a332 332 0 0 0 3.875 3.25c4.07 3.54 7.654 7.499 11.27 11.49 3.924 4.312 8.01 8.425 12.168 12.51 11.698 11.605 21.756 24.614 22.068 41.817-.04 17.85-5.138 30.317-17.096 43.667-1.934 1.918-3.904 3.674-5.97 5.443-4.088 3.564-7.873 7.347-11.631 11.253l-4.065 4.156a1101 1101 0 0 0-6.286 6.478 815 815 0 0 1-6.15 6.303l-1.869 1.973c-2.848 2.866-4.958 4.52-8.763 6.012-5.403-.536-7.86-3.584-11.551-7.352l-4.013-3.836a1374 1374 0 0 1-4.17-4.11c-.742-.732-1.483-1.465-2.246-2.22a3487 3487 0 0 1-4.646-4.614q-2.374-2.357-4.763-4.701c-2.312-2.27-4.611-4.553-6.908-6.84l-2.162-2.108-1.984-1.993-1.75-1.733C40.66 124.539 40.24 122.842 40 120c2.54-5.622 6.134-9.541 10.516-13.809l1.866-1.853c1.949-1.932 3.908-3.854 5.868-5.775l3.992-3.952Q67.11 89.794 72 85c-1.276-2.8-2.591-4.836-4.781-6.993L65.53 76.33l-1.815-1.774-1.868-1.852a2144 2144 0 0 0-5.91-5.828q-2.963-2.921-5.92-5.85a1131 1131 0 0 0-3.686-3.632c-5.117-5.057-5.117-5.057-5.831-9.518.529-4.099.911-4.748 3.555-7.633l1.932-2.117c3.162-3.339 6.37-6.624 9.626-9.871l2.108-2.11q2.183-2.185 4.37-4.364 3.354-3.35 6.7-6.708l4.26-4.256 2.023-2.029 1.873-1.863 1.645-1.643C81.658 2.491 85.072 1.88 89 3"
@@ -1918,7 +1918,7 @@ export const WPXIcon = ({className, ...rest}) => (
 export const AccessBankIcon = ({className, ...rest}) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 870 279" className={`w-20 h-20 ${className}`} {...rest}
+    viewBox="0 0 870 279" className={`lg:w-20 lg:h-20 sm:w-10 sm:h-10 ${className}`} {...rest}
     fillRule="evenodd"
     clipRule="evenodd"
     imageRendering="optimizeQuality"
@@ -1991,7 +1991,7 @@ export const AccessBankIcon = ({className, ...rest}) => (
 export const ShinguarsIcon = ({className, ...rest}) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 4500 4500" className={`w-20 h-20 ${className}`} {...rest}
+    viewBox="0 0 4500 4500" className={`lg:w-20 lg:h-20 sm:w-10 sm:h-10 ${className}`} {...rest}
     fillRule="evenodd"
     clipRule="evenodd"
     imageRendering="optimizeQuality"
@@ -2085,7 +2085,7 @@ export const ShinguarsIcon = ({className, ...rest}) => (
 export const KerryGoldIcon = ({className, ...rest}) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 455 350" className={`w-20 h-20 ${className}`} {...rest}
+    viewBox="0 0 455 350" className={`lg:w-20 lg:h-20 sm:w-10 sm:h-10 ${className}`} {...rest}
     fillRule="evenodd"
     clipRule="evenodd"
     imageRendering="optimizeQuality"
@@ -2745,7 +2745,7 @@ export const KerryGoldIcon = ({className, ...rest}) => (
 export  const BandGIcon = ({className, ...rest}) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 255 255" className={`w-20 h-20 ${className}`} {...rest}
+    viewBox="0 0 255 255" className={`lg:w-20 lg:h-20 sm:w-10 sm:h-10 ${className}`} {...rest}
     fillRule="evenodd"
     clipRule="evenodd"
     imageRendering="optimizeQuality"
@@ -2883,7 +2883,7 @@ export  const BandGIcon = ({className, ...rest}) => (
 export const PNXIcon = ({className, ...rest}) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 1609 651" className={`w-20 h-20 ${className}`} {...rest}
+    viewBox="0 0 1609 651" className={`lg:w-20 lg:h-20 sm:w-10 sm:h-10 ${className}`} {...rest}
     fillRule="evenodd"
     clipRule="evenodd"
     imageRendering="optimizeQuality"
@@ -2997,7 +2997,7 @@ export const PNXIcon = ({className, ...rest}) => (
 export const PremierCoolIcon = ({className, ...rest}) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 225 225"  className={`w-20 h-20 ${className}`} {...rest}
+    viewBox="0 0 225 225"  className={`lg:w-20 lg:h-20 sm:w-10 sm:h-10 ${className}`} {...rest}
     fillRule="evenodd"
     clipRule="evenodd"
     imageRendering="optimizeQuality"
@@ -3260,7 +3260,7 @@ export const PremierCoolIcon = ({className, ...rest}) => (
 export const OlogeIcon = ({className, ...rest}) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 244 206" className={`w-20 h-20 ${className}`}  {...rest}
+    viewBox="0 0 244 206" className={`lg:w-20 lg:h-20 sm:w-10 sm:h-10 ${className}`}  {...rest}
     fillRule="evenodd"
     clipRule="evenodd"
     imageRendering="optimizeQuality"
@@ -3323,7 +3323,7 @@ export const OlogeIcon = ({className, ...rest}) => (
 export const KleenUpIcon = ({className, ...rest}) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 225 225" className={`w-20 h-20 ${className}`} {...rest}
+    viewBox="0 0 225 225" className={`lg:w-20 lg:h-20 sm:w-10 sm:h-10 ${className}`} {...rest}
     fillRule="evenodd"
     clipRule="evenodd"
     imageRendering="optimizeQuality"
@@ -3515,5 +3515,64 @@ export const KleenUpIcon = ({className, ...rest}) => (
       fill="#6c4f24"
       d="M52.5 124.5q1.49 12.726 1 26h18q-9.217 1.485-19 1z"
     ></path>
+  </svg>
+);
+
+export const TitilopeIcon = ({className, ...rest}) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="871" height="742" viewBox="0 0 871 742" className={`lg:w-20 lg:h-20 sm:w-10 sm:h-10  ${className}`} {...rest}>
+    <path fill="#293333" d="M0 0h871v742H0z"></path>
+    <path fill="#FE6601" d="M396 280h327v182H396z"></path>
+    <path
+      fill="#FCFCFC"
+      d="M153 329c25.825 0 25.825 0 33 4l2.367 1.25c10.046 5.953 15.4 14.77 18.633 25.75l1 3c.814 13.837-1.673 24.914-10.687 35.75-6.939 7.424-15.382 11.595-25.313 13.25h-19z"
+    ></path>
+    <path
+      fill="#FFFDFB"
+      d="m575.688 328.688 2.357-.088c8.197-.09 14.326 3.206 20.35 8.623 6.815 7.544 7.968 15.327 7.886 25.16-.608 7.82-3.709 14.171-9.281 19.617-8.801 6.541-17.13 7.959-28 7-7.642-1.82-14.101-5.67-18.504-12.246-4.991-8.66-6.144-17.777-3.812-27.649C550 340.143 555.559 334.355 564 330c3.896-1.299 7.625-1.263 11.688-1.312"
+    ></path>
+    <path
+      fill="#FCFCFC"
+      d="M139 332c5.021 4.257 7.985 8.487 9 15 .085 2.177.118 4.356.114 6.534v3.943l-.016 4.23-.005 4.35a5973 5973 0 0 1-.024 11.418q-.014 5.832-.02 11.664-.016 11.43-.049 22.861h-9v-37h-25v37h-9q-.141-13.092-.207-26.184c-.021-4.053-.05-8.106-.095-12.16q-.063-5.874-.078-11.749-.01-2.235-.043-4.468c-.233-16.645-.233-16.645 6.388-23.462 9.719-6.66 17.555-8.149 28.035-1.977"
+    ></path>
+    <path
+      fill="#FFF9F5"
+      d="M611 328c26 0 26 0 36 5 5.683 5.683 8.277 10.113 8.375 18.313-.127 7.472-1.968 11.745-6.625 17.437-9.535 7.801-13.786 6.25-27.75 6.25v37h-10z"
+    ></path>
+    <path
+      fill="#2B3636"
+      d="M162 338c12.096 0 19.382 1.347 27.95 9.625 6.783 7.856 9.295 16.204 8.632 26.465-1.253 8.42-5.29 15.71-11.586 21.445C178.92 401.463 172.074 403 162 403z"
+    ></path>
+    <path
+      fill="#F8F9F9"
+      d="M259 328h11c7.663 13.852 15.002 27.799 22 42l1-41h9v83h-9l.414-3.145c1.197-18.047-8.804-32.86-17.323-48.051-2.133-3.88-4.111-7.844-6.091-11.804l-1 41h-10z"
+    ></path>
+    <path fill="#FEFEFE" d="M213 329h33v9h-24v28h24v9h-24v28h58v9h-67z"></path>
+    <path
+      fill="#FFF9F5"
+      d="M659 328h34v10h-24v27h24v10h-24v28h23v9h-33z"
+    ></path>
+    <path fill="#FFFEFE" d="M523 329h9v74h74v9h-83z"></path>
+    <path
+      fill="#FF6803"
+      d="M587.18 340.664c4.505 3.306 8.537 7.817 9.82 13.336.761 6.85.14 12.358-4 18-4.952 5.28-9.52 8.02-16.812 8.375-6.079-.154-10.498-1.853-14.946-6.023-5.181-5.733-6.776-10.862-6.62-18.567.79-5.808 4.098-9.845 8.378-13.66 7.48-5.298 16.063-6.095 24.18-1.46"
+    ></path>
+    <path
+      fill="#F9FAFA"
+      d="M322 329h9l.012 2.475c.033 3.717.104 7.433.175 11.15l.018 3.895c-.054 7.666-.054 7.666 3.22 14.316 3.903 3.28 6.346 3.505 11.317 3.45 3.372-.427 4.998-1.82 7.258-4.286 2.152-3.41 2.301-6.306 2.414-10.297l.117-3.652.094-3.801.117-3.848q.141-4.701.258-9.402h9q.149 5.947.22 11.896c.03 2.002.08 4.003.132 6.004.086 8.606-.266 15.771-6.387 22.256l-2.027 1.344-2.036 1.406C353 373 353 373 350 374l-1 38h-10v-38l-5-1c-2.098-1.164-2.098-1.164-4.062-2.625l-1.973-1.414c-5.278-5.268-6.215-9.034-6.356-16.426.012-2.825.073-5.648.141-8.473q.03-2.192.055-4.384c.043-3.56.112-7.119.195-10.678"
+    ></path>
+    <path fill="#FFFCFB" d="M464 328h54v10h-22v74h-9v-74h-23z"></path>
+    <path fill="#FFFAF7" d="M405 328h54v10h-22v74h-9v-74h-23z"></path>
+    <path fill="#F6F7F7" d="M307 328h10v84h-10z"></path>
+    <path fill="#FEFEFE" d="M370 329h9v83h-9z"></path>
+    <path
+      fill="#2E3838"
+      d="M130 338c4.613 1.887 6.657 4.665 9 9 .465 3.15.38 6.2.25 9.375L139 365h-25l-.375-9.062-.166-2.813c-.093-4.724.346-7.505 3.44-11.184 3.964-4.1 7.478-4.526 13.101-3.941"
+    ></path>
+    <path
+      fill="#FF6701"
+      d="m621 338 8.188-.25 2.551-.11c3.877-.057 5.815.082 9.187 2.188 4.309 4.512 4.447 7.453 4.328 13.442-.405 4.357-1.828 7.23-4.817 10.375-3.665 2.038-7.075 1.674-11.187 1.543L621 365z"
+    ></path>
+    <path fill="#FFFEFF" d="M509 351h9v61h-9z"></path>
+    <path fill="#FFF" d="M464 351h9v61h-9z"></path>
   </svg>
 );

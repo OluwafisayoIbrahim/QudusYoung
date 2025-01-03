@@ -1,18 +1,30 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Sidebar from "./components/Sidebar";
 import SocialLinks from "./components/SocialLinks";
 import Link from "next/link";
 import Typewriter from "./assets/Typewriter";
 import { motion } from "framer-motion";
-import { AccessBankIcon, BandGIcon, KerryGoldIcon, MorningFreshIcon, RightArrowIcon, ShinguarsIcon, WPXIcon, PNXIcon, PremierCoolIcon, OlogeIcon, KleenUpIcon } from "./assets/SocialMediaIcons";
-import Brands from "./components/Brands";
+import {
+  AccessBankIcon,
+  BandGIcon,
+  KerryGoldIcon,
+  MorningFreshIcon,
+  RightArrowIcon,
+  ShinguarsIcon,
+  WPXIcon,
+  PNXIcon,
+  PremierCoolIcon,
+  OlogeIcon,
+  KleenUpIcon,
+  TitilopeIcon,
+} from "./assets/SocialMediaIcons";
+
 
 const MagneticButton = ({ href, children }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [isClient, setIsClient] = useState(false); // Track if we are in the client
+  const [isClient, setIsClient] = useState(false); 
 
-  // Only set the client flag after component mounts (client side)
+ 
   useEffect(() => {
     setIsClient(true);
   }, []);
@@ -26,7 +38,7 @@ const MagneticButton = ({ href, children }) => {
       y: top + height / 2,
     };
 
-    // Calculate distance from center (max 30px movement)
+   
     const maxDistance = 30;
     const x = (clientX - center.x) / 3;
     const y = (clientY - center.y) / 3;
@@ -42,7 +54,7 @@ const MagneticButton = ({ href, children }) => {
   };
 
   if (!isClient) {
-    return null; // Avoid rendering on the server
+    return null; 
   }
 
   return (
@@ -110,26 +122,39 @@ const Page = () => {
           </div>
         </div>
       </main>
-      <section className="p-4 lg:p-6 bg-black flex flex-col items-center">
-  <hr className="my-8 border-gray-600 w-full" />
-  <h1 className="text-white text-2xl font-montserrat text-center">
-    SOME BRANDS I&apos;VE WORKED WITH.
-  </h1>
-  <div className="grid lg:grid-cols-10 sm:grid-cols-4 gap-8 mt-8">
-    {/* Brand logos or content go here */}
-    <MorningFreshIcon />
-    <WPXIcon  />
-    <ShinguarsIcon />
-    <AccessBankIcon />
-    <KerryGoldIcon />
-    <BandGIcon />
-    <PNXIcon />
-    <PremierCoolIcon />
-    <OlogeIcon />
-    <KleenUpIcon />
-  </div>
-</section>
-
+      <section className="p-1 lg:p-2 bg-black flex flex-col items-center">
+      <hr className="my-8 border-gray-600 w-full" />
+      
+      <h1 className="text-white text-2xl font-montserrat text-center">
+        SOME BRANDS I&apos;VE WORKED WITH.
+      </h1>
+     
+      <div className="relative lg:w-full sm:w-screen lg:mt-8 sm:mt-10 overflow-hidden">
+        <motion.div
+          className="flex gap-8 items-center"
+          animate={{ x: ["100%", "-100%"] }} 
+          transition={{
+            repeat: Infinity, 
+            duration: 10,
+            ease: "linear", 
+          }}
+        >
+          <div className="flex gap-4 lg:gap-8 shrink-0">
+          <MorningFreshIcon />
+          <WPXIcon />
+          <ShinguarsIcon />
+          <AccessBankIcon />
+          <KerryGoldIcon />
+          <BandGIcon />
+          <PNXIcon />
+          <PremierCoolIcon />
+          <OlogeIcon />
+          <KleenUpIcon />
+          <TitilopeIcon />
+          </div>
+        </motion.div>
+      </div>
+    </section>
     </>
   );
 };

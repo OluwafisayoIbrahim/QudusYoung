@@ -5,6 +5,11 @@ import { motion } from "framer-motion"; // Import Framer Motion
 
 const experiences = [
   {
+    company: "Titilope Adeniyi",
+    role: "Social Media/Community Manager",
+    timeframe: "August 2024 – Present",
+  },
+  {
     company: "The Shinguards – Online Football Community",
     role: "Digital Strategist",
     timeframe: "July 2024 – Present",
@@ -63,7 +68,7 @@ const About = () => {
   };
 
   return (
-    <main className="min-h-screen pt-20 px-4 bg-black">
+    <main className="min-h-screen pt-20 px-4 bg-black overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Left Column */}
         <div className="space-y-6 bg-white rounded-lg p-6 h-full min-h-svh shadow-lg">
@@ -123,17 +128,17 @@ const About = () => {
 
       <hr className="my-8 border-gray-600" />
       
-      {/* Experience Section */}
+      {/* Employment Section */}
       <motion.section
         id="experience"
-        className="text-white"
+        className="text-white bg-black pb-20"
         initial="hidden"
         whileInView="visible"
         variants={staggerContainer}
         viewport={{ once: true }}
       >
         <motion.div variants={fadeInVariant} className="px-4 py-8">
-          <h1 className="grid grid-cols-3 xl:grid-cols-2 text-3xl font-bold text-white">Experience</h1>
+          <h1 className="grid grid-cols-3 xl:grid-cols-2 text-3xl font-bold text-white">Employment History</h1>
         </motion.div>
 
         <div className="space-y-8 px-4">
